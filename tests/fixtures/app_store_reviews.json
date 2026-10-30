@@ -1,0 +1,51 @@
+{
+ "run_id": "cmvksjus90uar41o5qs522obp",
+ "slug": "app_store_reviews",
+ "version": "1.1.1",
+ "status": "done",
+ "input": {
+  "app_id": "https://apps.apple.com/us/app/whatsapp-messenger/id310633997",
+  "country": "us",
+  "max_results": 3
+ },
+ "count": 3,
+ "partial": false,
+ "finished_at": "2026-10-23T09:52:24.007Z",
+ "results": [
+  {
+   "rank": 2,
+   "text": "very hard to corret and made proper",
+   "title": "My ecperiance with whatsapp Messemger",
+   "app_id": "310633997",
+   "author": "Bigtino22",
+   "rating": 5,
+   "source": "feed",
+   "country": "us",
+   "review_id": "14695575921",
+   "updated_at": "2026-10-21T19:30:06-07:00",
+   "app_version": "26.41.74",
+   "votes_total": 0,
+   "votes_helpful": 0,
+   "developer_response": null,
+   "developer_response_at": null
+  },
+  {
+   "rank": 3,
+   "text": "Emojis",
+   "title": "Emojis",
+   "app_id": "310633997",
+   "author": "Clidia88",
+   "rating": 1,
+   "source": "feed",
+   "country": "us",
+   "review_id": "14695569749",
+   "updated_at": "2026-10-21T19:27:34-07:00",
+   "app_version": "26.41.74",
+   "votes_total": 0,
+   "votes_helpful": 0,
+   "developer_response": null,
+   "developer_response_at": null
+  }
+ ],
+ "_note": "Real run of 2026-10-23; two of the three reviews are kept, texts as written (spelling included). Authors are App Store nicknames, kept as shown."
+}

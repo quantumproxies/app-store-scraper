@@ -1,0 +1,87 @@
+{
+ "run_id": "cmvksidt10u9g41o56ztmlip0",
+ "slug": "app_store_apps",
+ "version": "1.1.1",
+ "status": "done",
+ "input": {
+  "term": "podcast player",
+  "country": "us",
+  "max_results": 2
+ },
+ "count": 2,
+ "partial": false,
+ "finished_at": "2026-10-23T09:51:14.105Z",
+ "results": [
+  {
+   "url": "https://apps.apple.com/us/app/podcast-app/id1199070742?uo=4",
+   "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/91/9e/33/919e3300-ce6d-c12b-7c63-e29917ab7a0f/AppIcon-0-0-1x_U007emarketing-0-11-0-sRGB-85-220.png/512x512bb.jpg",
+   "rank": 2,
+   "price": 0,
+   "title": "Podcast App",
+   "app_id": "1199070742",
+   "rating": 4.77,
+   "seller": "Evolve Global, Inc.",
+   "devices": [
+    "iPhone",
+    "iPad",
+    "iPod",
+    "Watch"
+   ],
+   "reviews": 309686,
+   "version": "7.23.0",
+   "category": "News",
+   "currency": "USD",
+   "bundle_id": "com.evolve.podcast",
+   "developer": "Evolve Global, Inc.",
+   "languages": [
+    "DA",
+    "NL",
+    "EN",
+    "FR",
+    "DE",
+    "HI",
+    "IT",
+    "JA",
+    "KO",
+    "NB",
+    "PT",
+    "RU",
+    "ES",
+    "SV"
+   ],
+   "advisories": [
+    "Infrequent/Mild Profanity or Crude Humor",
+    "Infrequent/Mild Alcohol, Tobacco, or Drug Use or References",
+    "Infrequent/Mild Mature/Suggestive Themes",
+    "Infrequent/Mild Medical/Treatment Information"
+   ],
+   "categories": [
+    "News"
+   ],
+   "minimum_os": "16.4",
+   "size_bytes": 122530816,
+   "updated_at": "2026-10-14T13:08:03Z",
+   "category_id": "6009",
+   "description": "Find great podcasts. Podcast App is the #1 most downloaded independent podcast player on iOS.",
+   "game_center": false,
+   "released_at": "2017-03-10T11:48:17Z",
+   "screenshots": [
+    "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/81/85/3a/81853aea-281d-28e8-aaa6-a87a4d8a257f/dab702f7-c5a1-41ec-8f24-22240e56c809_EN_-_5.5_-_Screenshot_01.png/392x696bb.png",
+    "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/12/d8/bb/12d8bb40-1c58-54d2-aadb-b7aa1f05a686/6404e4fd-5396-4389-b62f-292adf70d49a_EN_-_5.5_-_Screenshot_02.png/392x696bb.png"
+   ],
+   "developer_id": "1199070741",
+   "developer_url": "https://podcast.app/",
+   "release_notes": "Hey there, loyal users! In this release, we are improving the overall reliability of the app.",
+   "content_rating": "12+",
+   "price_formatted": "Free",
+   "ipad_screenshots": [
+    "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/f9/44/1d/f9441dd4-d340-5b33-44e9-534afe5bb166/e38b2eb5-9533-4efc-805f-76cbc9f3b775_EN_-_12.9_-_Screenshot_01.png/576x768bb.png",
+    "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/0d/06/c0/0d06c078-9983-578b-5480-cf1c0b2aad3d/d2beaf0e-5cc1-47c7-a6e7-8474fdbf373f_EN_-_12.9_-_Screenshot_02.png/576x768bb.png"
+   ],
+   "developer_store_url": "https://apps.apple.com/us/developer/evolve-global-inc/id1199070741?uo=4",
+   "rating_current_version": 4.77,
+   "reviews_current_version": 309686
+  }
+ ],
+ "_note": "Real run of 2026-10-23; the second of the two apps is kept, description and release notes cut after the first sentences, screenshots and iPad screenshots cut to two of five."
+}

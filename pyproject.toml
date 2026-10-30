@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quanticdata-app-store-scraper"
+version = "0.1.0"
+description = "App Store scraper for Python and the command line: Apple App Store apps by keyword or app id (rating, review count, price, version, size, developer), customer reviews of any app, and Apple catalog search for apps, podcasts, music and books, as JSON or CSV. Free and open source; no Apple developer account or proxies needed."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+authors = [{ name = "QuanticData", email = "hello@quanticdata.io" }]
+keywords = ["app-store-scraper", "app-store", "app-store-api", "app-store-reviews", "app-store-reviews-scraper", "ios-apps", "itunes-search-api", "itunes", "aso", "app-store-optimization", "app-reviews", "web-scraping"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+pandas = ["pandas>=1.3"]
+
+[project.scripts]
+app-store-scraper = "quanticdata_app_store_scraper.__main__:run"
+
+[project.urls]
+Homepage = "https://quanticdata.io/collectors/app-store-scraper-api/?utm_source=github&utm_medium=pypi&utm_campaign=app-store-scraper"
+Documentation = "https://quanticdata.io/docs/"
+Source = "https://github.com/quantumproxies/app-store-scraper"
+Issues = "https://github.com/quantumproxies/app-store-scraper/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"quanticdata_app_store_scraper" = ["spec.json", "py.typed"]

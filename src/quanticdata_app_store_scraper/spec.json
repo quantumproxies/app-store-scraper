@@ -1,0 +1,183 @@
+{
+ "cli": "app-store-scraper",
+ "name": "App Store Scraper",
+ "version": "0.1.0",
+ "description": "App Store scraper for Python and the command line: Apple App Store apps by keyword or app id (rating, review count, price, version, size, developer), customer reviews of any app, and Apple catalog search for apps, podcasts, music and books, as JSON or CSV. Free and open source; no Apple developer account or proxies needed.",
+ "links": {
+  "repo": "https://github.com/quantumproxies/app-store-scraper",
+  "page": "https://quanticdata.io/collectors/app-store-scraper-api/?utm_source=github&utm_medium=cli&utm_campaign=app-store-scraper",
+  "billing": "https://app.quanticdata.io/billing?utm_source=github&utm_medium=cli&utm_campaign=app-store-scraper",
+  "pricing": "https://quanticdata.io/pricing/?utm_source=github&utm_medium=cli&utm_campaign=app-store-scraper"
+ },
+ "commands": [
+  {
+   "name": "apps",
+   "collector": "app_store_apps",
+   "method": "apps",
+   "help": "App Store apps by search term or app id",
+   "description": "Apple App Store apps by search term or by app/bundle id.",
+   "positional": "term",
+   "positional_is_list": false,
+   "positional_optional": true,
+   "columns": [
+    "rank",
+    "title",
+    "developer",
+    "rating",
+    "reviews",
+    "price_formatted",
+    "category",
+    "version"
+   ],
+   "sample": "app_store_apps",
+   "inputs": [
+    {
+     "name": "term",
+     "type": "string",
+     "required": false,
+     "description": "What to search in the App Store, e.g. \"podcast player\". Omit it when you pass --app-ids.",
+     "arg": "term"
+    },
+    {
+     "name": "app_ids",
+     "type": "string[]",
+     "required": false,
+     "description": "Numeric app ids (310633997), bundle ids (com.spotify.client) or store URLs.",
+     "arg": "app_ids"
+    },
+    {
+     "name": "country",
+     "type": "string",
+     "required": false,
+     "description": "App Store storefront, as an ISO country code (default us).",
+     "arg": "country"
+    },
+    {
+     "name": "lang",
+     "type": "string",
+     "required": false,
+     "description": "Interface language, e.g. en, it, de.",
+     "arg": "lang"
+    },
+    {
+     "name": "max_results",
+     "type": "integer",
+     "required": false,
+     "description": "How many apps to deliver at most (1–200). You pay only for delivered apps.",
+     "min": 1,
+     "max": 200,
+     "default": 20,
+     "arg": "max_results"
+    }
+   ]
+  },
+  {
+   "name": "reviews",
+   "collector": "app_store_reviews",
+   "method": "reviews",
+   "help": "customer reviews of one App Store app",
+   "description": "Customer reviews of an App Store app — rating, title, text, version, votes.",
+   "positional": "app_id",
+   "positional_is_list": false,
+   "positional_optional": false,
+   "columns": [
+    "rank",
+    "rating",
+    "updated_at",
+    "app_version",
+    "title"
+   ],
+   "sample": "app_store_reviews",
+   "inputs": [
+    {
+     "name": "app_id",
+     "type": "string",
+     "required": true,
+     "description": "Numeric App Store id (310633997) or the app's store URL.",
+     "arg": "app_id"
+    },
+    {
+     "name": "country",
+     "type": "string",
+     "required": false,
+     "description": "Storefront to read the reviews of, as an ISO country code (default us).",
+     "arg": "country"
+    },
+    {
+     "name": "max_results",
+     "type": "integer",
+     "required": false,
+     "description": "How many reviews to deliver at most (1–500). You pay only for delivered reviews.",
+     "min": 1,
+     "max": 500,
+     "default": 50,
+     "arg": "max_results"
+    }
+   ]
+  },
+  {
+   "name": "search",
+   "collector": "itunes_search",
+   "method": "search",
+   "help": "Apple catalog search: apps, podcasts, music, movies, books",
+   "description": "Apple catalog search — apps, podcasts, music, movies, ebooks — per storefront.",
+   "positional": "query",
+   "positional_is_list": false,
+   "positional_optional": false,
+   "columns": [
+    "rank",
+    "kind",
+    "name",
+    "artist",
+    "genre",
+    "price",
+    "rating"
+   ],
+   "sample": "itunes_search",
+   "inputs": [
+    {
+     "name": "query",
+     "type": "string",
+     "required": true,
+     "description": "Search terms, e.g. \"meditation\".",
+     "arg": "query"
+    },
+    {
+     "name": "media",
+     "type": "string",
+     "required": false,
+     "description": "Which catalog to search.",
+     "enum": [
+      "app",
+      "podcast",
+      "music",
+      "movie",
+      "ebook",
+      "audiobook",
+      "all"
+     ],
+     "default": "app",
+     "arg": "media"
+    },
+    {
+     "name": "country",
+     "type": "string",
+     "required": false,
+     "description": "Storefront, as an ISO country code (default us).",
+     "default": "us",
+     "arg": "country"
+    },
+    {
+     "name": "max_results",
+     "type": "integer",
+     "required": false,
+     "description": "How many results to deliver at most (1–50). You pay only for delivered results.",
+     "min": 1,
+     "max": 50,
+     "default": 25,
+     "arg": "max_results"
+    }
+   ]
+  }
+ ]
+}
